@@ -1,0 +1,36 @@
+{
+  "name": "cron-jobs",
+  "version": "1.0.0",
+  "description": "Cron Job Service",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon --watch . --watch ../Cadence-Brain src/index.js",
+    "dev2": "SET NODE_ENV=development&& nodemon src/index.js",
+    "start": "NODE_ENV=production node src/index.js",
+    "lint": "npx prettier --check .",
+    "format": "npx prettier --write .",
+    "prepare": "npx husky install"
+  },
+  "author": "Sanskar",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.6.7",
+    "@grpc/proto-loader": "^0.6.13",
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "joi": "^17.6.0",
+    "morgan": "^1.10.0",
+    "node-reel": "^1.0.12",
+    "sequelize": "^6.21.3",
+    "socket.io": "^4.6.1",
+    "winston": "^3.8.1",
+    "winston-daily-rotate-file": "^4.7.1",
+    "winston-loki": "^6.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
